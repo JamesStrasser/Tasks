@@ -1,0 +1,12 @@
+.sideBySideLayout {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .sideBySideItem {
+    padding: 5px;
+    text-align: center;
+    /* background-color: #f0f0f0; */
+    margin: 5px;
+  }

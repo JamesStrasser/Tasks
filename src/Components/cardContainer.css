@@ -1,0 +1,9 @@
+  /* Styles for the card container */
+  .card-container {
+    /* width: 200px; */
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Apply box shadow by default */
+}

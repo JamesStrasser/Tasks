@@ -1,0 +1,17 @@
+.label-value-pair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    flex-basis: 30%;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  
+  .value {
+    flex-basis: 70%;
+  }
+  

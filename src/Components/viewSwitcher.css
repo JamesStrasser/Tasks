@@ -1,0 +1,22 @@
+/* Styles for the view switcher */
+.view-switcher {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.view-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.view-card.active {
+    background: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+}

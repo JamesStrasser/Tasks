@@ -1,0 +1,30 @@
+.delete-button {
+    background: #FF5733;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.delete-button:hover {
+    background: #D4391B; /* Darker shade of red on hover */
+    transform: scale(1.05);
+}
+
+
+.approve-button {
+    background: #4CAF50; /* Green background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.approve-button:hover {
+    background: #45A84B; /* Darker shade of green on hover */
+    transform: scale(1.05);
+}
