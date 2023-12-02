@@ -8,6 +8,7 @@ import Columns from '../Components/columns';
 import Section from '../Components/section';
 import './form.css';
 import axios from 'axios';
+import {API_URL} from '../utils'
 const CreateTaskForm = () => {
   // useEffect(()=>{
     // axios.get("http://localhost:5000/api/users").then(res => {
@@ -32,7 +33,7 @@ const CreateTaskForm = () => {
       ) return;
     dispatch(addTask(newTask));
    
-    axios.post("http://localhost:5000/api/task", {
+    axios.post(API_URL.concat("task"), {
       "Task_Id": newTask.Name.concat(" - ",newTask.Priority),
       "Name": newTask.Name,
       "Desc": newTask.Desc,

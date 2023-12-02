@@ -9,12 +9,13 @@ import CardContainer from '../Components/cardContainer';
 import Button from '../Components/button';
 import './form.css';
 import axios from 'axios';
+import {API_URL} from '../utils'
 export default function MyTasksForm() {
     const dispatch = useDispatch();
     const tasks = useSelector((state)=> state.tasks);
     useEffect(()=>{
         /*On component mount, query tasks and set it to the global state*/
-        axios.get("http://localhost:5000/api/tasks").then(res => {
+        axios.get(API_URL.concat("tasks")).then(res => {
             dispatch(setTaskList(res.data.data));
             console.log(tasks)
 
@@ -35,7 +36,7 @@ export default function MyTasksForm() {
         })[0] /*Assuming always found. Will break if not found*/
         console.log(taskToDelete)
        
-        axios.post("http://localhost:5000/api/task", {
+        axios.post(API_URL.concat("task"), {
           "Task_Id": taskToDelete.Task_Id,
           "Name": taskToDelete.Name,
           "Desc": taskToDelete.Desc,
