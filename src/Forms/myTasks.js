@@ -14,7 +14,7 @@ export default function MyTasksForm() {
     const dispatch = useDispatch();
     const tasks = useSelector((state)=> state.tasks);
     useEffect(()=>{
-        console.log('new1 app')
+        console.log('new3 app')
         /*On component mount, query tasks and set it to the global state*/
         axios.get(API_URL.concat("tasks")).then(res => {
             dispatch(setTaskList(res.data.data));
