@@ -14,12 +14,14 @@ export default function MyTasksForm() {
     const dispatch = useDispatch();
     const tasks = useSelector((state)=> state.tasks);
     useEffect(()=>{
+        console.log("my tasks use effects start")
         /*On component mount, query tasks and set it to the global state*/
         axios.get(API_URL.concat("tasks")).then(res => {
             dispatch(setTaskList(res.data.data));
             console.log(tasks)
 
         }).catch(error=>console.log(error))
+        console.log("my tasks use effects end")
     }, [])
     const completeOnClick = (e) =>{
         e.preventDefault();
