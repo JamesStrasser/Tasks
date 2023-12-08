@@ -16,7 +16,7 @@ export default function MyTasksForm() {
     useEffect(()=>{
         console.log("my tasks use effects start")
         /*On component mount, query tasks and set it to the global state*/
-        axios.get(API_URL.concat("tasks")).then(res => {
+        axios.get(API_URL.concat("api/tasks")).then(res => {
             dispatch(setTaskList(res.data.data));
             console.log(tasks)
 
