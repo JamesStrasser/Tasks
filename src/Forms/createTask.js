@@ -65,7 +65,6 @@ const CreateTaskForm = () => {
 
   const handleSetPriority = (e) => {
     e.preventDefault();
-    console.log(e.target)
     dispatch(setPriority(e.target.value));
 
   }

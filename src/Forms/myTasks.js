@@ -18,8 +18,6 @@ export default function MyTasksForm() {
         /*On component mount, query tasks and set it to the global state*/
         axios.get(API_URL.concat("tasks")).then(res => {
             dispatch(setTaskList(res.data.data));
-            console.log(tasks)
-
         }).catch(error=>console.log(error))
        
     }, [])
@@ -29,15 +27,9 @@ export default function MyTasksForm() {
     }
     const deleteOnClick = (e) =>{
         e.preventDefault();
-
-        // dispatch(addTask(newTask));
-        console.log(e.target.getAttribute("identifer"))
-
         let taskToDelete = tasks.filter((task)=> {
             return task.Task_Id === e.target.getAttribute("identifer")
         })[0] /*Assuming always found. Will break if not found*/
-        console.log(taskToDelete)
-       
         axios.post(API_URL.concat("task"), {
           "Task_Id": taskToDelete.Task_Id,
           "Name": taskToDelete.Name,
